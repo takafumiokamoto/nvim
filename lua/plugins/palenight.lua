@@ -1,8 +1,12 @@
 return {
-    "wilmanbarrios/palenight.nvim",
+    "alexmozaidze/palenight.nvim",
     priority = 1000,
     enabled = true,
     config = function()
-        vim.cmd("colorscheme palenight")
+      local palenight = require("palenight")
+      palenight.setup({
+        italic = true
+      })
+      vim.cmd("colorscheme palenight")
     end,
 }
